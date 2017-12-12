@@ -1,10 +1,10 @@
 /**
- * Created by HRH on 2017/6/30
+ * Created by HRH on 2017/12/12
  */
-(function(win) {
+(function() {
     'use strict';
 
-    // 设置图片目录（项目根目录）
+    // 设置资源目录（项目根目录）
     // var baseURI = 'http://119.29.149.113/phaser-init'
     var baseURI ='../..'
 
@@ -12,14 +12,14 @@
     localStorage.baseURI = baseURI
 
     //将整个canvas挂载在$('#game-container')元素上
-    document.getElementById('game-container').style.height = document.body.clientHeight + 'px';
+    document.getElementById('game-container').style.height = document.body.clientHeight + 'px'
 
     //获取屏幕的缩放比
     var Ratio = window.devicePixelRatio
 
     //获取屏幕的宽和高
-    var w = document.documentElement.clientWidth || document.body.clientWidth;
-    var h = document.documentElement.clientHeight || document.body.clientHeight;
+    var w = document.documentElement.clientWidth || document.body.clientWidth
+    var h = document.documentElement.clientHeight || document.body.clientHeight
 
     //因为我们在index.html设置了禁止缩放的meta头
     //<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -28,14 +28,15 @@
     var hh = Ratio * h
 
     //前两个参数是Phaser要创建的canvas元素的宽高，第三个参数是游戏渲染的引擎，这里让Phaser自己识别设置即可，第四个参数是游戏挂载在哪个元素上
-    var game = new Phaser.Game(ww, hh, Phaser.AUTO, 'game-container');
+    var game = new Phaser.Game(ww, hh, Phaser.AUTO, 'game-container')
 
-    //
+    //添加场景
     game.state.add('Boot', Boot)
     game.state.add('Preload', Preload)
     game.state.add('State1', State1)
     game.state.add('State2', State2)
 
+    //启动场景
     game.state.start('Boot')
 
 })(window)
