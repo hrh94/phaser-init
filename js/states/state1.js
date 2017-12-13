@@ -19,7 +19,7 @@ var State1 = function(game) {
       //动画组，方便统一处理多个对象的动画
       group=game.add.group()
 
-      //第四个参数是默认情况下选择第几帧图片
+      //第四个参数是没有加入动画时静态展示第几帧图片
       sprites=game.add.sprite(w*.5,h*.6,'sprites',0)
       tool.setSize(sprites,'width',w*.5)
       sprites.anchor.set(.5,1)

@@ -1,15 +1,10 @@
 var State2 = function(game) {
 
-    var baseURI = localStorage.baseURI
-
-    var tool = new utils()
     var w = null
     var h = null
 
     var img2_1=null
     var img2_2=null
-
-    var group1 = null
 
     this.preload = function() {
 

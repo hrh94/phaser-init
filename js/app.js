@@ -2,16 +2,15 @@
  * Created by HRH on 2017/12/12
  */
 (function() {
-    'use strict';
+    'use strict'
 
     // 设置资源目录（项目根目录）
-    // var baseURI = 'http://119.29.149.113/phaser-init'
     var baseURI ='../..'
 
     //将图片目录放在内存中，方便全局调用
     localStorage.baseURI = baseURI
 
-    //将整个canvas挂载在$('#game-container')元素上
+    //设置$('#game-container')的高度等于屏幕的高度（这里用原生js代码书写）
     document.getElementById('game-container').style.height = document.body.clientHeight + 'px'
 
     //获取屏幕的缩放比
