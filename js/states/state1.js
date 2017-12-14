@@ -1,4 +1,3 @@
-
 var State1 = function(game) {
 
     var baseURI = localStorage.baseURI

@@ -1,4 +1,3 @@
-//这个场景是预加载场景，会加载后面所有场景的资源，由于加载的资源比较多，所以在这个场景我们需要以一种友好的方式展现我们资源加载的过程，用到的是上个场景已经帮我们加载完成的start_bg资源，和Phaser自身的文本对象（显示加载进度）
 var Preload = function(game) {
     var baseURI = localStorage.baseURI
     var tool = new utils()
