@@ -30,7 +30,6 @@ var Boot = function(game) {
 
     }
     this.preload = function() {
-        console.log('222222');
         //设置图片支持跨域请求
         game.load.crossOrign = true
         //加载预加载界面所需的资源，可以看到图片跟$('.main')界面一致，第一个参数是创建sprite对象时所需要的资源标识，第二个参数是资源所在路径
